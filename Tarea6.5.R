@@ -10,8 +10,10 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 ###Descargar data de la secuenciación de un genoma de E. coli
 ##Instalar 'devtools' y 'rentrez' desde la terminal
+
 #Crear librería
 sudo apt-get install build-essential libcurl4-gnutls-dev libxml2-dev libssl-dev
+
 #Entrar a R e instalar
 sudo -i R
 install.packages('devtools')
@@ -19,9 +21,8 @@ library(devtools)
 devtools::install_github('ropensci/rentrez')
 
 #Desde R
-```library(rentrez)
+library(rentrez)
 
-```
 #Descargar el artículo relacionado con el tema que quiero estudiar
 
 ecoli_paper<-entrez_search(db="pubmed", term = "10.3389/fmicb.2017.00789[doi]")
